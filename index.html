@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRADE_CALCULATOR</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./pro.js"></script>
+</head>
+
+<div>
+    <h3>Students Grade Calculator</h3>
+    <!-- For box -->
+    <div class="box">
+        <input type="text" class="subjects" placeholder="Marathi" id="mar"> <br>
+        <input type="text" class="subjects" placeholder="English" id="Eng"> <br>
+        <input type="text" class="subjects" placeholder="Maths" id="maths"> <br>
+        <input type="text" class="subjects" placeholder="Physics" id="phy"> <br>
+        <input type="button" name="button" id="button" value="submit" onclick="grade()">
+        <p>YOUR RESULT IS HERE</p>
+    </div>
+
+    <script>
+        function grade() {
+            let marathi = document.getElementById("mar").value;
+            console.log(marathi)
+            let english = document.getElementById("Eng").value;
+            console.log(english)
+            let maths = document.getElementById("maths").value;
+            console.log(maths)
+            let physics = document.getElementById("phy").value;
+            console.log(physics)
+
+            let total = parseFloat(marathi)+parseFloat(english) + parseFloat (maths) +parseFloat (physics);
+            alert(total)
+
+            let percent = total * 100 /400 ;
+            alert(percent)
+        }
+
+    </script>
+
+    </body>
+
+</html>
